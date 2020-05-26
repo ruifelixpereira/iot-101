@@ -1,0 +1,18 @@
+{
+  "name": "simulateddevice",
+  "version": "1.0.0",
+  "description": "In the Shared access policies blade, click the iothubowner policy, and then copy and make note of the IoT Hub connection string",
+  "main": "simulateddevice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-iot-device": "^1.1.9",
+    "azure-iot-device-mqtt": "^1.1.9"
+  },
+    "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

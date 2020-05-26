@@ -1,0 +1,7 @@
+old
+
+node_modules
+
+*.pptx
+
+.env
