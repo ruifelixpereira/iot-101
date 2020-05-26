@@ -52,7 +52,7 @@ This tutorial guides you to create an Azure IoT Hub using the Azure portal, conf
 
 ## Run Device Simulator
 
-To simulate **MyTestDevice** sending telemetry to your IoT hub, run the Node.js simulated device application that you can download [here](https://portal.azure.com).
+To simulate **MyTestDevice** sending telemetry to your IoT hub, run the Node.js simulated device application that you can download [here](https://github.com/ruifelixpereira/iot-101/tree/master/labs/simulator).
 
 In a terminal window on your development machine, navigate to the root folder of the sample Node.js project you downloaded. Then navigate to the **iot-hub\Tutorials\ConnectivityTests** folder.
 

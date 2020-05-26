@@ -1,7 +1,7 @@
 old
-
 node_modules
+staging
 
 *.pptx
-
 .env
+MYLOG.md
