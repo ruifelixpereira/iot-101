@@ -21,18 +21,16 @@ var connectCallback = function (err) {
     } else {
         console.log('Client connected');
 
-        /*
         // Receive - only for cloud to device scenarios
         client.on('message', function (msg) {
-            console.log('Id: ' + msg.messageId + ' Body: ' + msg.data);
+            console.log('Received message Id: ' + msg.messageId + ' Body: ' + msg.data);
             client.complete(msg, printResultFor('completed'));
         });
-        */
 
         // Create a message and send it to the IoT Hub every second
         setInterval(function(){
-            var windSpeed = 5 + (Math.random() * 7);
-            var data = JSON.stringify({ deviceId: process.env.SIMULATOR_DEVICE_ID, windSpeed: windSpeed });
+            var temperature = 7 + (Math.random() * 4);
+            var data = JSON.stringify({ deviceId: process.env.SIMULATOR_DEVICE_ID, temperature: temperature });
             var message = new Message(data);
             console.log("Sending message: " + message.getData());
             client.sendEvent(message, printResultFor('send'));
