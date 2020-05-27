@@ -1,14 +1,32 @@
-# Get connection string:
-In the Shared access policies blade, click the iothubowner policy, and then copy and make note of the IoT Hub connection string
+## Run Device Simulator
 
-# Init project
+1. In the terminal window, run the following commands to install the required libraries and rename the file **.env-to-customize** to **.env**.
 
-npm init
+```cmd/sh
+npm install
+mv .env-to-customize .env
+```
 
-npm install azure-iot-device azure-iot-device-mqtt --save
+2. Edit the file **.env** and replace the environment variable **IOTHUB_CONNECTION_STRING** value with your device connection string.
 
-# Develop SimulatedDevice.js
+3. In the terminal window, run the following command to run the simulated device.
 
-# Run it
+```cmd/sh
+node index.js
+```
 
-node SimulatedDevice.js
+The terminal window displays information as it tries to connect to your hub and starts to send messages to your IoT Hub.
+
+### Note on Protocols
+
+A device can use any of the following protocols to connect to your IoT hub:
+
+| Protocol | Outbound port |
+| --- | --- |
+| MQTT |8883 |
+| MQTT over WebSockets |443 |
+| AMQP |5671 |
+| AMQP over WebSockets |443 |
+| HTTPS |443 |
+
+If the outbound port is blocked by a firewall, the device can't connect.
