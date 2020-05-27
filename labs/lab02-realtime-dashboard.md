@@ -93,7 +93,7 @@ Your Streaming Analytics job starts looking for temperature readings in the inco
 
     ![Streaming dataset location in Power BI](./img/lab02/stream-analytics-streaming-dataset.png)
 
-2. In your workspace, click **+&nbsp;Create**.
+2. In your workspace, click **Create**.
 
     ![The Create button in Power BI workspace](./img/lab02/pbi-create-dashboard.png)
 

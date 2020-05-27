@@ -1,0 +1,22 @@
+SELECT *
+   INTO BlobOutput
+   FROM IoTHubInput
+   HAVING Temperature > 27
+
+SELECT
+       System.TimeStamp AS time,
+       AVG(Temperature) as temperature, 
+       COUNT(*) AS[eventCount]
+   INTO
+       PowerBIOutput
+    FROM
+       IoTHubInput
+    GROUP BY
+       time, 
+       temperature,
+       TumblingWindow(second, 10)
+
+SELECT *
+   INTO FunctionActuatorOutput
+   FROM IoTHubInput
+   HAVING Temperature > 30
